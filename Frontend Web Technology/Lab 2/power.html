@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        let n = parseInt(prompt("Enter number :"));
+
+            if (num < 10 || num > 99) {
+                alert("Please provide a valid 2-digit number.");
+            }
+            else{
+
+                let firstDigit = Math.floor(num / 10);
+                let secondDigit = num % 10;
+            
+                let result = Math.pow(firstDigit, secondDigit);
+            
+                    alert(result);
+            }
+
+    </script>
+
+</body>
+</html>

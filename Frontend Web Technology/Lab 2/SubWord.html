@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        let word = prompt("Enter a word:");
+        let first = word.indexOf('a');
+        let last = word.lastIndexOf('a');
+
+        if (first !== -1 && last !== -1 && first !== last) {
+            // Extracts everything strictly between the first and last 'a'
+            let textBetween = word.substring(first + 1, last);
+            alert("Substring between first and last 'a': " + textBetween);
+        } else {
+            alert("The letter 'a' must appear at least twice.");
+        }
+
+
+    </script>
+
+</body>
+</html>

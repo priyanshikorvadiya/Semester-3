@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+    let num1 = parseFloat(prompt("Enter a number1 :"));
+    let num2 = parseFloat(prompt("Enter a number2 :"));
+
+    let isDivisible = false;
+
+    for(i = num1 ; i <= num2 ; i++){
+        
+    if(num1 < 1){
+        alert(num + " is not a prime number.")
+    }
+    else{
+        for( j = 2 ; j <= Math.sqrt(num1) ; j++){
+        if(num1 % j == 0){
+            isDivisible = true;
+            break;
+        }
+    }
+    }
+
+    if(!isDivisible){
+        alert(num1);
+    }
+
+    }
+
+    </script>
+
+</body>
+</html>
