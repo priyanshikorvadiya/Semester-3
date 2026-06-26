@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<script>
+
+    let n = parseInt(prompt("Enter number :"));
+    let temp1 = n;
+    let temp2 = n;
+    let count = 0;
+    let sum = 0;
+    
+    while(temp1 > 0){
+        count++;
+        temp1 = parseInt(temp1 / 10);
+    }
+
+    while(temp2 > 0){
+        let digit = temp2 % 10;
+
+        sum = sum + Math.pow(digit , count);
+
+        temp2 = parseInt(temp2 / 10);
+    }
+
+    if(sum == a){
+        alert(n + " is an armstrong number.");
+    }
+    else{
+        alert(n + " is not an armstrong number.");
+    }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<script>
+
+        let n1 = parseFloat(prompt("Enter number 1 :"));
+        let n2 = parseFloat(prompt("Enter number 2 :"));
+
+        if(n1 > n2){
+            let a = prompt("Which operation do you wanna perform(+,-,*,/) ?");
+
+            if(a == '+'){
+                alert("Addition of two number is :"+(n1 + n2));
+            }
+            else if(a == '-'){
+                alert("Subtraction of two number is :"+(n1 - n2));
+            }
+            else if(a == '*'){
+                alert("Multiplication of two number is :"+(n1 * n2));
+            }
+            else if(a == '/'){
+                alert("Division of two number is :"+(n1 / n2));
+            }
+            else{
+                alert("Invalid choice !!");
+            }
+        }
+        else{
+            alert("Number 1 must be greater than Number 2");
+        }
+    
+</script>
+
+</body>
+</html>
