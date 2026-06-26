@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+      
+    <script>
+
+        function quicksort(arr){
+            if(arr.length <= 1){
+                return arr;
+            }
+
+            let pivot = arr[arr.length - 1];
+            let left = [];//Smaller num
+            let right = [];//Bigger num
+
+            for( let i = 0; i < arr.length - 1; i++){
+                if(arr[i] < pivot){
+                    left.push(arr[i]);
+                }
+                else{
+                    right.push(arr[i]);
+                }
+            }
+
+            //spread operator
+            return [...quicksort(left),pivot,...quicksort(right)];
+        }
+
+          userArray = [10,2,7,9,2,1];
+        document.write("Original Array :",userArray,"<br/>");
+
+          sortedArray = quicksort(userArray);
+        document.write("Sorted Array :",sortedArray,"<br/>");
+
+
+        // merge array (can be used in place of spread operator)
+        //     let sortedLeft = sort(left)
+        //     let sortedRight = sort(right)
+        //     let mergedResult = []
+        //     for (i = 0; i < sortedLeft.length; i++) {
+        //         mergedResult.push(sortedLeft[i])
+        //     }
+        //     mergedResult.push(pivot)
+        //     for (i = 0; i < sortedRight.length; i++) {
+        //         mergedResult.push(sortedRight[i])
+        //     }
+        //     return mergedResult
+
+    </script>
+
+</body>
+</html>
