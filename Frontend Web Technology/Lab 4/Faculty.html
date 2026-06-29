@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        faculty = [
+            {
+                Name : "Arjun Bala",
+                Subject : "FEWT",
+                Image : "https://du-website.s3.ap-south-1.amazonaws.com/U01/Faculty-Photo/15---28-04-2023-02-07-35.jpg"
+            },
+            {
+                Name : "Praduman Jadeja",
+                Subject : "DS",
+                Image : "https://du-website.s3.ap-south-1.amazonaws.com/U01/Faculty-Photo/6---28-04-2023-02-06-07.jpg"
+            },
+            {
+                Name : "Swati Sharma",
+                Subject : "Java",
+                Image : "https://du-website.s3.ap-south-1.amazonaws.com/U01/Faculty-Photo/11---29-04-2023-01-44-21.jpg"
+            },
+            {
+                Name : "Vishal Kansagra",
+                Subject : "C",
+                Image : "https://du-website.s3.ap-south-1.amazonaws.com/U01/Faculty-Photo/334---28-04-2023-01-34-00.jpg"
+            }
+        ]
+
+        for(i = 0 ; i < faculty.length;i++){
+            document.write("Name : "+ faculty[i].Name + "<br/>")
+            document.write("Subject : " + faculty[i].Subject + "<br/>")
+            document.write(`<img src = " ${faculty[i].Image}"`)
+            document.write("<br/>")
+        }
+
+    </script>
+
+</body>
+</html>
