@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+  <body>
+    <h1>Time Left Until Next Year</h1>
+    <h2 id="display"></h2>
+
+    <script>
+      let currentYear = new Date().getFullYear();
+      let nextYear = currentYear + 1;
+
+      let targetDate = new Date("Jan 1, " + nextYear + " 00:00:00");
+      let currentDate = new Date();
+
+      let totalMilliseconds = targetDate - currentDate;
+
+      let totalSeconds = totalMilliseconds / 1000;
+      let totalMinutes = totalSeconds / 60;
+      let totalHours = totalMinutes / 60;
+      let totalDays = totalHours / 24;
+
+      document.write("Seconds left :" + totalSeconds + "<br/>");
+      document.write("Minutes left :" + totalMinutes + "<br/>");
+      document.write("Hours left :" + totalHours + "<br/>");
+      document.write("Days left :" + totalDays + "<br/>");
+    </script>
+  </body>
+</html>

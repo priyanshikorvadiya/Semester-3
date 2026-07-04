@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let d1 = prompt("Enter date 1(yyyy-mm-dd)");
+      let d2 = prompt("Enter date 2(yyyy-mm-dd)");
+      let date1 = new Date(d1);
+      let date = new Date(d2);
+
+      let TotalDays = Math.abs((date1 - date) / (1000 * 60 * 60 * 24));
+      let Weekends = Math.round(Math.abs(TotalDays / 7));
+      let WorkingDays = Math.round(Math.abs(TotalDays - Weekends));
+
+      document.write("TotalDays :" + TotalDays);
+      document.write("Weekends :" + Weekends);
+      document.write("WorkingDays :" + WorkingDays);
+    </script>
+  </body>
+</html>
