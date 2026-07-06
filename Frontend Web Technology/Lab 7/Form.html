@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form align="center" onsubmit="validate()">
+      <h1>User Registration Form</h1>
+      Username:
+      <input type="text" id="username" /><br /><br />
+
+      Password:
+      <input type="password" id="password" /><br /><br />
+
+      Repeat Password:
+      <input type="password" id="rpassword" /><br /><br />
+
+      Date of Birth:
+      <input type="date" id="dob" /><br /><br />
+
+      Enrollment Number:
+      <input type="text" id="enroll" /><br /><br />
+
+      Email:
+      <input type="text" id="email" /><br /><br />
+
+      <input type="submit" value="Submit" />
+    </form>
+    <script>
+      function validate() {
+        username = document.getElementById("username").value;
+        password = document.getElementById("password").value;
+        rpassword = document.getElementById("rpassword").value;
+        dob = document.getElementById("dob").value;
+        enroll = document.getElementById("enroll").value;
+        email = document.getElementById("email").value;
+
+        username_pattern = /^[a-zA-Z0-9]{3,16}$/;
+        password_pattern =
+          /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{2,}$/;
+        enroll_pattern = /^\d{11}$/;
+        email_pattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+
+        if (!username_pattern.test(username)) {
+          alert(
+            "Invalid username. It should be at least 3 characters long and contain only letters and numbers.",
+            +"<br/>",
+          );
+          return false;
+        }
+        if (!password_pattern.test(password)) {
+          alert(
+            "Invalid password. It should be at least 2 characters long and contain at least one uppercase letter, one lowercase letter, one digit, and one special character.",
+            +"<br/>",
+          );
+          return false;
+        }
+        if (password !== rpassword) {
+          alert("Passwords do not match." + "<br/>");
+          return false;
+        }
+        if (!enroll_pattern.test(enroll)) {
+          alert(
+            "Invalid enrollment number. It should be of 11 digits." + "<br/>",
+          );
+          return false;
+        }
+        if (!email_pattern.test(email)) {
+          alert("Invalid email address." + "<br/>");
+          return false;
+        }
+      }
+    </script>
+  </body>
+</html>

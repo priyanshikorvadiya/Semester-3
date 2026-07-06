@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="calculator">
+      <table border="1" align="center">
+        <tr>
+          <td colspan="4" height="50px"><input type="text" id="mytxt" /></td>
+        </tr>
+        <tr>
+          <td><button onclick="clearAll()">AC</button></td>
+          <td><button onclick="dtlast()">-></button></td>
+          <td><button onclick="display('%')">%</button></td>
+          <td><button onclick="display('/')">/</button></td>
+        </tr>
+        <tr>
+          <td><button onclick="display('7')">7</button></td>
+          <td><button onclick="display('8')">8</button></td>
+          <td><button onclick="display('9')">9</button></td>
+          <td><button onclick="display('+')">+</button></td>
+        </tr>
+        <tr>
+          <td><button onclick="display('4')">4</button></td>
+          <td><button onclick="display('5')">5</button></td>
+          <td><button onclick="display('6')">6</button></td>
+          <td><button onclick="display('-')">-</button></td>
+        </tr>
+        <tr>
+          <td><button onclick="dispaly('1')">1</button></td>
+          <td><button onclick="display('2')">2</button></td>
+          <td><button onclick="display('3')">3</button></td>
+          <td><button onclick="display('+')">+</button></td>
+        </tr>
+        <tr>
+          <td><button onclick="display('0')">0</button></td>
+          <td><button onclick="display('.')">.</button></td>
+          <td><button onclick="display('*')">*</button></td>
+          <td><button onclick="calculate()">=</button></td>
+        </tr>
+      </table>
+    </div>
+    <script>
+      let num;
+      function display(num) {
+        document.getElementById("mytxt").value += num;
+      }
+      function clearAll() {
+        document.getElementById("mytxt").value = " ";
+      }
+      function calculate() {
+        let sol = document.getElementById("mytxt").value;
+        ans = eval(sol);
+        document.getElementById("mytxt").value = ans;
+      }
+      function dtlast() {
+        document.getElementById("mytxt").value = exp;
+        exp = exp.slice(0, -1);
+        document.getElementById("mytxt").value = eval(exp);
+      }
+    </script>
+  </body>
+</html>
