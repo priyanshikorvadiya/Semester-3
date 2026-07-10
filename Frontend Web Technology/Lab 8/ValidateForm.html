@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Registration</title>
+  </head>
+  <body>
+    <form onsubmit="return clickbtn(event);">
+      <table align="center" border="0" cellpadding="5">
+        <caption>
+          <strong>Student Registration</strong>
+        </caption>
+
+        <tr>
+          <td><label for="f">Full name</label></td>
+          <td><input id="f" type="text" /></td>
+        </tr>
+
+        <tr>
+          <td><label for="e">Email id</label></td>
+          <td><input id="e" type="text" /></td>
+        </tr>
+
+        <tr>
+          <td><label for="m">Mobile No</label></td>
+          <td>
+            <input id="m" type="tel" maxlength="10" />
+          </td>
+        </tr>
+
+        <tr>
+          <td><label for="d">Date of Birth</label></td>
+          <td><input id="d" type="date" /></td>
+        </tr>
+
+        <tr>
+          <td><label for="c">CPI</label></td>
+          <td><input id="c" type="text" /></td>
+        </tr>
+
+        <tr>
+          <td>
+            <button type="submit">Submit</button>
+          </td>
+        </tr>
+      </table>
+    </form>
+
+    <script>
+      function clickbtn(event) {
+        let name = document.getElementById("f");
+        let email = document.getElementById("e");
+        let mobileno = document.getElementById("m");
+        let dob = document.getElementById("d");
+        let cpi = document.getElementById("c");
+
+        let emailpattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+        let mobilepattern = /^[0-9]{10}$/;
+
+        if (name.length < 3) {
+          alert("Invalid Name! Must be at least 3 characters.");
+          return false;
+        }
+
+        if (!emailpattern.test(email)) {
+          alert("Invalid Email!");
+          return false;
+        }
+
+        if (!mobilepattern.test(mobileno)) {
+          alert("Invalid Mobile Number! Must be exactly 10 digits.");
+          return false;
+        }
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1 id="msg">Original text</h1>
+    <button id="clickbtn" onclick="clickbtn()">Click here</button>
+
+    <script>
+      function clickbtn() {
+        abcclick = document.getElementById("clickbtn");
+
+        abcclick.addEventListener("click", function () {
+          document.getElementById("msg").innerText = "Mouse clicked";
+        });
+
+        abcclick.addEventListener("dblclick", function () {
+          document.getElementById("msg").innerHTML = "Double clicked";
+        });
+
+        abcclick.addEventListener("mousedown", function () {
+          document.getElementById("msg").innerHTML = "Mouse downed";
+        });
+
+        abcclick.addEventListener("mousemove", function () {
+          document.getElementById("msg").innerHTML = "Mouse moved";
+        });
+
+        abcclick.addEventListener("mouseover", function () {
+          document.getElementById("msg").innerHTML = "Mouse overed";
+        });
+
+        abcclick.addEventListener("mouseout", function () {
+          document.getElementById("msg").innerHTML = "Mouse outed";
+        });
+
+        abcclick.addEventListener("mouseup", function () {
+          document.getElementById("msg").innerHTML = "Mouse uped";
+        });
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1 id="msg">Original text</h1>
+    <input id="clickbtn" onclick="clickbtn()" />
+
+    <script>
+      function clickbtn() {
+        abcclick = document.getElementById("clickbtn");
+
+        abcclick.addEventListener("keypress", function () {
+          document.getElementById("msg").innerText = "Key Pressed";
+        });
+
+        abcclick.addEventListener("keyup", function () {
+          document.getElementById("msg").innerHTML = "Key Uped";
+        });
+
+        abcclick.addEventListener("keydown", function () {
+          document.getElementById("msg").innerHTML = "Key downed";
+        });
+      }
+    </script>
+  </body>
+</html>

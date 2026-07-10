@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1 id="msg">Original text</h1>
+    <input id="clickbtn" onclick="clickbtn()" />
+
+    <script>
+      function clickbtn() {
+        abcclick = document.getElementById("clickbtn");
+
+        abcclick.addEventListener("blur", function () {
+          document.getElementById("msg").innerText = "Blured";
+        });
+
+        abcclick.addEventListener("change", function () {
+          document.getElementById("msg").innerHTML = "Changed";
+        });
+
+        abcclick.addEventListener("focus", function () {
+          document.getElementById("msg").innerHTML = "Focused";
+        });
+
+        abcclick.addEventListener("reset", function () {
+          document.getElementById("msg").innerHTML = "Reset";
+        });
+
+        abcclick.addEventListener("select", function () {
+          document.getElementById("msg").innerHTML = "Selected";
+        });
+
+        abcclick.addEventListener("submit", function () {
+          document.getElementById("msg").innerHTML = "Submitted";
+        });
+      }
+    </script>
+  </body>
+</html>
