@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      document.write("Array destructuring <br/>");
+
+      fruit = ["apple", "banana", "watermelon", "cherry"];
+      let [first, second, third, fourth] = fruit;
+
+      document.write("1. -> " + first + "<br/>");
+      document.write("2. -> " + second + "<br/>");
+      document.write("3. -> " + third + "<br/>");
+      document.write("4. -> " + fourth + "<br/>");
+
+      console.log("Object Destructuring");
+
+      console.log("<--Basic demo -->");
+      stu = { name: "Priyanshi", rno: "347", Class: "3B" };
+      const { name, rno, Class } = stu;
+
+      console.log("Name : " + name);
+      console.log("Roll No : " + rno);
+      console.log("Class : " + Class);
+
+      console.log("<--Assigning new variable name -->");
+
+      const product = { id: 101, title: "Laptop" };
+
+      const { title: productName, id } = product;
+
+      console.log("Product name :" + productName);
+      console.log("Product id :" + id);
+
+      console.log("<--Setting default value -->");
+
+      const settings = { theme: "dark" };
+
+      const { theme, layout = "grid" } = settings;
+
+      console.log("Theme" + theme);
+      console.log("Layout" + layout);
+
+      console.log("<--Destructuring in Function Parameters-->");
+
+      const movie = { title: "Inception", year: 2010 };
+
+      function displayMovie({ title, year }) {
+        console.log(`${title} was released in ${year}.`);
+      }
+
+      displayMovie(movie);
+
+      console.log("<--Nested Object Destructuring-->");
+
+      const profile = {
+        username: "kp_sk",
+        data: { email: "kpsk@gmail.com" },
+      };
+
+      const {
+        data: { email },
+      } = profile;
+
+      console.log(email);
+    </script>
+  </body>
+</html>
