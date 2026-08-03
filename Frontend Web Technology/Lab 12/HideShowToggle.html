@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script
+      src="https://cdn.jsdelivr.net/npm/jquery@4.0.0/dist/jquery.min.js"
+      integrity="sha256-OaVG6prZf4v69dPg6PhVattBXkcOWQB62pdZ3ORyrao="
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <h1 id="myele">Hello Guys</h1>
+
+    <button id="myclick1">Hide</button>
+    <button id="myclick2">Show</button>
+    <button id="myclick3">Toggle</button>
+    <script>
+      $(document).ready(function () {
+        $("#myclick1").click(() => {
+          $("#myele").hide();
+        });
+        $("#myclick2").click(() => {
+          $("#myele").show();
+        });
+        $("#myclick3").click(() => {
+          $("#myele").toggle();
+        });
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script
+      src="https://cdn.jsdelivr.net/npm/jquery@4.0.0/dist/jquery.min.js"
+      integrity="sha256-OaVG6prZf4v69dPg6PhVattBXkcOWQB62pdZ3ORyrao="
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <ul>
+      <li>Apple</li>
+      <li>Banana</li>
+    </ul>
+
+    <button id="myclick">Hide</button>
+    <script>
+      $(document).ready(function () {
+        $("#myclick").click(() => {
+          $("ul").siblings().hide();
+        });
+      });
+    </script>
+  </body>
+</html>

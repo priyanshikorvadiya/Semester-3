@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script
+      src="https://cdn.jsdelivr.net/npm/jquery@4.0.0/dist/jquery.min.js"
+      integrity="sha256-OaVG6prZf4v69dPg6PhVattBXkcOWQB62pdZ3ORyrao="
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <img id="img" src="./ajanta.jpg.jpeg" />
+    <br />
+    <button id="myclick1">Cilck Me to Slide Up</button>
+    <button id="myclick2">Cilck Me to Slide Down</button>
+    <button id="myclick3">Cilck Me to Slide Toggle</button>
+    <script>
+      $(document).ready(function () {
+        $("#myclick1").click(() => {
+          $("#img").slideUp();
+        });
+        $("#myclick2").click(() => {
+          $("#img").slideDown();
+        });
+        $("#myclick3").click(() => {
+          $("#img").slideToggle();
+        });
+      });
+    </script>
+  </body>
+</html>

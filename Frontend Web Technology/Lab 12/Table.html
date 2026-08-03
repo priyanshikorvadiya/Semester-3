@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script
+      src="https://cdn.jsdelivr.net/npm/jquery@4.0.0/dist/jquery.min.js"
+      integrity="sha256-OaVG6prZf4v69dPg6PhVattBXkcOWQB62pdZ3ORyrao="
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <table border="1">
+      <tr>
+        <th>Fruit</th>
+        <th>Colour</th>
+      </tr>
+      <tr>
+        <td>Apple</td>
+        <td>red</td>
+      </tr>
+      <tr>
+        <td>Banana</td>
+        <td>yellow</td>
+      </tr>
+    </table>
+
+    <button id="myclick">Add Item</button>
+    <script>
+      $(document).ready(function () {
+        $("#myclick").click(() => {
+          $("table").append("<tr><td>Watermelon</td><td>Green</td></tr>");
+        });
+      });
+    </script>
+  </body>
+</html>
