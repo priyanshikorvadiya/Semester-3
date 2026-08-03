@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let a = 4;
+      let b = 6;
+      function print(val) {
+        document.write("Sum of " + a + " & " + b + " is ", val);
+      }
+      function sum(a, b, callback) {
+        add = a + b;
+        callback(add);
+      }
+      sum(4, 6, print);
+    </script>
+  </body>
+</html>
