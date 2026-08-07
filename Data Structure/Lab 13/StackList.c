@@ -1,13 +1,13 @@
 //WAP to implement stack using singly linked list.
 
+#include<stdio.h>
+#include<stdlib.h>
+
 struct Node
 {
     int info;
     struct Node *link;
 };
-
-#include<stdio.h>
-#include<stdlib.h>
 
 struct Node *top = NULL;
 
