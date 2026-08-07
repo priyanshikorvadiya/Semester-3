@@ -59,12 +59,12 @@ void PlayPrevious(){
         return;
     }
 
-    if(save != NULL){
-        save = save->lptr;
-        printf("Playing previous : %s\n",save->info);
+    if(save == NULL){
+        printf("No songs available.");
     }
     else{
-        printf("No songs available.");
+        save = save->lptr;
+        printf("Playing previous : %s\n",save->info);
     }
 }
 
