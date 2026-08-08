@@ -22,7 +22,7 @@ void PUSH(int x){
 int POP(){
     if(top == -1){
         printf("Stack underflow!");
-        return 0;
+        return -1;
     }
     else{
         return Stack[top--];
