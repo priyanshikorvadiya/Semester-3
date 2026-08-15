@@ -43,7 +43,7 @@ void DEQUEUE(){
     F = F->link;
 
     if(F == NULL){
-        R == NULL;
+        R = NULL;
     }
     free(temp);
 }
