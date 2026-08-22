@@ -56,12 +56,12 @@ bool IsSame(struct TreeNode* r1, struct TreeNode* r2){
 void main(){
     bool res;
 
+    printf("Build Tree1 :");
     struct TreeNode* tree1 = NULL;
-
     tree1 = Insert(tree1);
 
+    printf("Build Tree2 :");
     struct TreeNode* tree2 = NULL;
-
     tree2 = Insert(tree2);
 
     res = IsSame(tree1 , tree2);
