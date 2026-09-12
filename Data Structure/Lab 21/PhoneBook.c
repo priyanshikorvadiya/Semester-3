@@ -114,10 +114,10 @@ struct TreeNode* Search(struct TreeNode* root,char* phone){
 
 void Ascending(struct TreeNode* root){
     if(root != NULL){
-        Ascending(root->left);
+        Ascending(root->right);
         printf("%s |",root->Name);
         printf("%s ||",root->PhoneNo);
-        Ascending(root->right);
+        Ascending(root->left);
     }
 }
 
@@ -125,10 +125,10 @@ void Ascending(struct TreeNode* root){
 
 void Descending(struct TreeNode* root){
     if(root != NULL){
-        Descending(root->right);
+        Descending(root->left);
         printf("%s |",root->Name);
         printf("%s ||",root->PhoneNo);
-        Descending(root->left);
+        Descending(root->right);
     }
 }
 
