@@ -118,10 +118,10 @@ public class PhoneBook {
 
     static void Ascending(TreeNode root){
         if(root != null){
-            Ascending(root.right);
+            Ascending(root.left);
             System.out.print(root.name + " -> ");
             System.out.println(root.phone);
-            Ascending(root.left);
+            Ascending(root.right);
         }
     }
 
@@ -129,10 +129,10 @@ public class PhoneBook {
     
     static void Descending(TreeNode root){
         if(root != null){
-            Descending(root.left);
+            Descending(root.right);
             System.out.print(root.name + " -> ");
             System.out.println(root.phone);
-            Descending(root.right);
+            Descending(root.left);
         }
     }
 
