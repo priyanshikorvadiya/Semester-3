@@ -40,11 +40,11 @@ struct TreeNode* Insert(struct TreeNode *root, char* name, char* phone){
     }
 
     else if(strcmp(root->Name, name) > 0){
-        root->right = Insert(root->right, name , phone);
+        root->left = Insert(root->left, name , phone);
     }
     
     else{
-        root->left = Insert(root->left, name , phone);
+        root->right = Insert(root->right, name , phone);
     }
     return root;
 }
