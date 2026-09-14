@@ -42,11 +42,11 @@ public class PhoneBook {
         }
 
         else if(strcmp > 0){
-            root.right = Insert(root.right, name , phone);
+            root.left = Insert(root.left, name , phone);
         }
         
         else{
-            root.left = Insert(root.left, name , phone);
+            root.right = Insert(root.right, name , phone);
         }
         return root;
     }
